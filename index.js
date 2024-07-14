@@ -1,16 +1,8 @@
-// module imports
-const express = require("express");
+import app from "./App.js";
 
-// variables
-const app = express();
-const PORT = 5000;
-
-// api end-points
-app.get("/", (req, res) => {
-  res.send("simple todo-app");
-});
+const port = process.env.PORT || 5000;
 
 // app listening
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
